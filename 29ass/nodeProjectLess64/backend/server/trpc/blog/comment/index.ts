@@ -19,13 +19,19 @@ export const CommentRouterTrpc = router({
     .input(
       z.object({
         comment: z.string(),
-        blogId: z.number()
+        blogId: z.number(),
       })
     )
     .mutation(async (opts) => {
-      const newComment = await prisma.comment.create({
-        data: opts.input,
-      });
-      return newComment;
+      console.log(opts.input)
+      try {
+        const comment = await prisma.comment.create({
+          data: opts.input
+        });
+        return comment;
+      } catch (e) {
+        console.log(e)
+        return {}
+      }
     }),
 });

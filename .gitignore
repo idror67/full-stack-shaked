@@ -36,3 +36,8 @@ dist
 25ass/node-class58/server/client.ts
 27ass/less60/backend/db.db-journal
 27ass/less60/backend/db.db
+31ass/chat-app/src/firebase_connection.ts
+31ass/chat-app/.firebaserc
+31ass/chat-app/firebase.json
+31ass/chat-app/firestore.indexes.json
+31ass/chat-app/firestore.rules
