@@ -8,3 +8,14 @@ while (index < arr.length) {
     console.log(`The value at ${index} is ${arr[index]}`)
     index = index + 1
 }
+
+// for loop
+for (const item of arr) {
+    console.log(`The value is ${item}`)
+}
+
+
+// for loop with entries
+for (const [index, item] of arr.entries()) {
+    console.log(`The value at ${index} is ${item}`)
+}
