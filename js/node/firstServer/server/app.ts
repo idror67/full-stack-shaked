@@ -1,6 +1,8 @@
 import express from "express";
 import cors from 'cors'
 import {router_product} from './router/product'
+import {test_router} from './router/test'
+import {path_params_router} from './router/path_params'
 const app = express();
 
 
@@ -9,6 +11,8 @@ app.use(cors({
 }));
 
 app.use('/product', router_product)
+app.use('/test', test_router )
+app.use('/path_params', path_params_router)
 
 app.get('/', (req , res) => {
     console.log('hey ma!')
